@@ -1,0 +1,314 @@
+:root {
+  --table-color: rgb(45, 45, 42);
+  --additional-color:rgb(193, 73, 83);
+  --secondary-color:rgb(211, 211, 211);
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+main p {
+  font-size: 1.3em;
+}
+
+main img {
+  margin-right: 20px;
+  float: left;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
+}
+
+/*Table*/
+table, th, td {
+  border: 1px solid var(--table-color);
+  border-collapse: separate;
+}
+
+table th {
+  font-family: 'Staatliches', cursive;
+  color: var(--table-color);
+}
+
+th, td {
+  padding: 10px 40px;
+}
+
+/*Links*/
+nav li {
+  display: inline-block;
+}
+
+nav a:link, nav a:visited {
+  color: black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 1.3em;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+a:hover {
+  font-style: italic;
+  font-weight: bold;
+}
+
+a span {
+  color: black;
+  text-decoration: none;
+}
+
+/*Button*/
+button {
+  margin: 30px 0;
+  height: 50px;
+  width: 170px;
+  font-size: 1.3em;
+  border-radius: 10px;
+  transition: ease-out 0.7s;
+  background: var(--additional-color);
+  color: white;
+}
+
+button:hover,button:focus {
+  background: white;
+  color: var(--additional-color);
+}
+
+  .button {
+    display: inline-block;
+    font-family: inherit;
+    background-color: var(--additional-color);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    transition: ease-out 0.7s;
+  }
+
+  .button:hover,
+  .button:focus {
+    font-style: normal;
+    font-weight: normal;
+    cursor: pointer;
+    opacity: 0.8;
+    color: var(--additional-color);
+    background-color: #fff;
+  }
+
+/*work.html*/
+#myProjects {
+  display: block;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.grid__item {
+  background-color: var(--secondary-color);
+}
+
+@keyframes color-change {
+  0% {
+    fill: #edc340;
+  }
+
+  50% {
+    fill: #fcffad;
+  }
+
+  100% {
+    fill: #f76414;
+  }
+}
+@keyframes cloud1-move {
+  from {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(3000px, 50px);
+  }
+}
+@keyframes cloud2-move {
+  from {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(2000px, 50px);
+  }
+}
+@keyframes cloud3-move {
+  from {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(2500px, 50px);
+  }
+}
+@keyframes cloud4-move {
+  from {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(1300px, 50px);
+  }
+}
+@keyframes cloud5-move {
+  from {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(1000px, 50px);
+  }
+}
+@keyframes wave1-move {
+  from {
+    transform: translate(-500px, 50px);
+  }
+
+  to {
+    transform: translate(1000px, 50px);
+  }
+}
+@keyframes wave2-move {
+  from {
+    transform: translate(-500px, 50px);
+  }
+
+  to {
+    transform: translate(1000px, 50px);
+  }
+}
+@keyframes wave3-move {
+  from {
+    transform: translate(-500px, 50px);
+  }
+
+  to {
+    transform: translate(1000px, 50px);
+  }
+}
+
+#svg_445 {
+  animation: 4s color-change infinite alternate linear;
+}
+#svg_14, #svg_13 {
+  animation: 10s cloud1-move infinite alternate linear;
+}
+#svg_16, #svg_15 {
+  animation: 10s cloud2-move infinite alternate linear;
+}
+#svg_18, #svg_17 {
+  animation: 8s cloud3-move infinite alternate linear;
+}
+#svg_22, #svg_21 {
+  animation: 7s cloud4-move infinite alternate linear;
+}
+#svg_20, #svg_19 {
+  animation: 5s cloud5-move infinite alternate linear;
+}
+#svg_33 {
+  animation: 10s wave1-move infinite alternate linear;
+}
+#svg_32 {
+  animation: 10s wave2-move infinite alternate linear;
+}
+#svg_31 {
+  animation: 10s wave3-move infinite alternate linear;
+}
+@media all and (max-width: 500px) {
+  .project-list {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }.grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  header a{
+    text-align: center;
+  }
+  nav li{
+    display: flex;
+    flex-direction: column;
+  }
+  main #info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main #info img{
+    width: 60%;
+  }
+  main svg{
+    display: none;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .project-list {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  header a{
+    text-align: center;
+  }
+
+}

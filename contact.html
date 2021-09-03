@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vadym Hryn - Portfolio</title>
+  <link rel="shortcut icon" href="./img/briefcase.png">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.production.css">
+</head>
+
+<body>
+  <header>
+    <!--My Logo-->
+    <a href="index.html">
+      <img height="70px" width="200px" src="./img/personal-logo.png" alt="Personal logo of Vadym Hryn">
+    </a>
+    <nav>
+      <ul role="menubar">
+        <li role="presentation">
+          <a href="index.html" role="menuitem">Home</a>
+        </li>
+        <li role="presentation">
+          <a href="about.html" role="menuitem">About me</a>
+        </li>
+        <li role="presentation">
+          <a href="work.html" role="menuitem">Work</a>
+        </li>
+        <li role="presentation">
+          <a href="contact.html" role="menuitem">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div>
+      <h1>Contact</h1>
+      <p>Vadym Hryn<br>
+        73 Brighton 1st Pl <br>
+        Brooklyn, NY 11235<br>
+        United States of America<br>
+        <br>
+        <a href="tel:+16466837980"><span>Call me: </span>+1 646 683 7980</a><br>
+        <a href="mailto:gryn.vadim@gmail.com"><span>Text me:</span> gryn.vadim@gmail.com</a>
+      </p>
+      <div>
+        <h1>Feedback</h1>
+        <form action="" method="post" id="contactForm">
+          <label class="formLabel" for="contacFName">First Name: </label>
+          <input type="text" id="contacFName" placeholder="John" required>
+          <br>
+          <label class="formLabel" for="contacLName">Last Name: </label>
+          <input type="text" id="contacLName" placeholder="Smith" required>
+          <br>
+          <label class="formLabel" for="contactEmail">Email: </label>
+          <input type="email" id="contactEmail" placeholder="example@gmail.com" required>
+          <br>
+          <label class="formLabel" for="contactTel">Telephone: </label>
+          <input type="tel" id="contactTel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="000-000-0000">
+          <br>
+          <label class="formLabel" for="contactMes">Message: </label>
+          <textarea id="contactMes" maxlength="240" required></textarea>
+          <br>
+          <input type="submit" value="Send message">
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>Find me on</p>
+    <div>
+      <!-- Github logo -->
+      <a href="https://github.com/Ophilus" target="_blank"><img src="img/github_icon.svg" alt="github link"></a>
+      <!-- Twitter logo -->
+      <a href="https://twitter.com/VadimHryn" target="_blank"><img src="img/twitter_icon.svg" alt="twitter link"></a>
+      <!-- LinkedIn logo -->
+      <a href="https://www.linkedin.com/in/vadym-hryn-029734140/" target="_blank"><img src="img/linkedin_icon.svg" alt="linkedin link"></a>
+    </div>
+  </footer>
+  <script src="js/tota11y.min.js"></script>
+</body>
+
+</html>
