@@ -4,9 +4,10 @@
 * Autoprefixer: v10.3.1
 * Browsers: last 4 version
 */
+
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -16,11 +17,11 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 100vh;
 }
 
@@ -29,17 +30,17 @@ main {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 main p {
@@ -56,7 +57,7 @@ header {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
 }
 
 footer {
@@ -64,11 +65,11 @@ footer {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
 }
 
@@ -77,12 +78,10 @@ table {
   border: 1px solid rgb(45, 45, 42);
   border-collapse: separate;
 }
-
 th {
   border: 1px solid rgb(45, 45, 42);
   border-collapse: separate;
 }
-
 td {
   border: 1px solid rgb(45, 45, 42);
   border-collapse: separate;
@@ -183,10 +182,6 @@ button:focus {
 }
 
 /*work.html*/
-#myProjects {
-  display: block;
-}
-
 .project-list {
   display: -ms-grid;
   display: grid;
@@ -195,8 +190,100 @@ button:focus {
   grid-gap: 20px;
 }
 
-.grid__item {
-  background-color: rgb(211, 211, 211);
+.list__item {
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.list__item .item {
+  width: 300px;
+  height: 250px;
+  -webkit-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.list__item .item.item1 {
+  background: rgb(51, 51, 51);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.list__item .item.item1 .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.list__item:hover .item.item1 {
+  -webkit-transform: translateY(-250px);
+      -ms-transform: translateY(-250px);
+          transform: translateY(-250px);
+  background: rgb(193, 73, 83);
+}
+
+.list__item .item.item1 .content h3 {
+  font-family: serif;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+.list__item .item.item2 {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #fff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+.list__item:hover .item.item2 {
+  -webkit-transform: translateY(-250px);
+      -ms-transform: translateY(-250px);
+          transform: translateY(-250px);
+}
+
+.list__item .item.item2 .content p {
+  margin: 0;
+  padding: 0;
+  font-family: serif;
+}
+
+.list__item .item.item2 .content a {
+  margin: 15px 0 0;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 900;
+  color: rgb(51, 51, 51);
+  padding: 5px;
+  border: 1px solid #333;
+}
+
+.list__item .item.item2 .content a:hover {
+  background: rgb(193, 73, 83);
+  color: rgb(51, 51, 51);
+  font-style: normal;
+  font-weight: 900;
 }
 
 @-webkit-keyframes color-change {
@@ -230,238 +317,238 @@ button:focus {
 @-webkit-keyframes cloud1-move {
   from {
     -webkit-transform: translate(0, 50px);
-    transform: translate(0, 50px);
+            transform: translate(0, 50px);
   }
 
   to {
     -webkit-transform: translate(3000px, 50px);
-    transform: translate(3000px, 50px);
+            transform: translate(3000px, 50px);
   }
 }
 
 @keyframes cloud1-move {
   from {
     -webkit-transform: translate(0, 50px);
-    transform: translate(0, 50px);
+            transform: translate(0, 50px);
   }
 
   to {
     -webkit-transform: translate(3000px, 50px);
-    transform: translate(3000px, 50px);
+            transform: translate(3000px, 50px);
   }
 }
 
 @-webkit-keyframes cloud2-move {
   from {
     -webkit-transform: translate(0, 50px);
-    transform: translate(0, 50px);
+            transform: translate(0, 50px);
   }
 
   to {
     -webkit-transform: translate(2000px, 50px);
-    transform: translate(2000px, 50px);
+            transform: translate(2000px, 50px);
   }
 }
 
 @keyframes cloud2-move {
   from {
     -webkit-transform: translate(0, 50px);
-    transform: translate(0, 50px);
+            transform: translate(0, 50px);
   }
 
   to {
     -webkit-transform: translate(2000px, 50px);
-    transform: translate(2000px, 50px);
+            transform: translate(2000px, 50px);
   }
 }
 
 @-webkit-keyframes cloud3-move {
   from {
     -webkit-transform: translate(0, 50px);
-    transform: translate(0, 50px);
+            transform: translate(0, 50px);
   }
 
   to {
     -webkit-transform: translate(2500px, 50px);
-    transform: translate(2500px, 50px);
+            transform: translate(2500px, 50px);
   }
 }
 
 @keyframes cloud3-move {
   from {
     -webkit-transform: translate(0, 50px);
-    transform: translate(0, 50px);
+            transform: translate(0, 50px);
   }
 
   to {
     -webkit-transform: translate(2500px, 50px);
-    transform: translate(2500px, 50px);
+            transform: translate(2500px, 50px);
   }
 }
 
 @-webkit-keyframes cloud4-move {
   from {
     -webkit-transform: translate(0, 50px);
-    transform: translate(0, 50px);
+            transform: translate(0, 50px);
   }
 
   to {
     -webkit-transform: translate(1300px, 50px);
-    transform: translate(1300px, 50px);
+            transform: translate(1300px, 50px);
   }
 }
 
 @keyframes cloud4-move {
   from {
     -webkit-transform: translate(0, 50px);
-    transform: translate(0, 50px);
+            transform: translate(0, 50px);
   }
 
   to {
     -webkit-transform: translate(1300px, 50px);
-    transform: translate(1300px, 50px);
+            transform: translate(1300px, 50px);
   }
 }
 
 @-webkit-keyframes cloud5-move {
   from {
     -webkit-transform: translate(0, 50px);
-    transform: translate(0, 50px);
+            transform: translate(0, 50px);
   }
 
   to {
     -webkit-transform: translate(1000px, 50px);
-    transform: translate(1000px, 50px);
+            transform: translate(1000px, 50px);
   }
 }
 
 @keyframes cloud5-move {
   from {
     -webkit-transform: translate(0, 50px);
-    transform: translate(0, 50px);
+            transform: translate(0, 50px);
   }
 
   to {
     -webkit-transform: translate(1000px, 50px);
-    transform: translate(1000px, 50px);
+            transform: translate(1000px, 50px);
   }
 }
 
 @-webkit-keyframes wave1-move {
   from {
     -webkit-transform: translate(-500px, 50px);
-    transform: translate(-500px, 50px);
+            transform: translate(-500px, 50px);
   }
 
   to {
     -webkit-transform: translate(1000px, 50px);
-    transform: translate(1000px, 50px);
+            transform: translate(1000px, 50px);
   }
 }
 
 @keyframes wave1-move {
   from {
     -webkit-transform: translate(-500px, 50px);
-    transform: translate(-500px, 50px);
+            transform: translate(-500px, 50px);
   }
 
   to {
     -webkit-transform: translate(1000px, 50px);
-    transform: translate(1000px, 50px);
+            transform: translate(1000px, 50px);
   }
 }
 
 @-webkit-keyframes wave2-move {
   from {
     -webkit-transform: translate(-500px, 50px);
-    transform: translate(-500px, 50px);
+            transform: translate(-500px, 50px);
   }
 
   to {
     -webkit-transform: translate(1000px, 50px);
-    transform: translate(1000px, 50px);
+            transform: translate(1000px, 50px);
   }
 }
 
 @keyframes wave2-move {
   from {
     -webkit-transform: translate(-500px, 50px);
-    transform: translate(-500px, 50px);
+            transform: translate(-500px, 50px);
   }
 
   to {
     -webkit-transform: translate(1000px, 50px);
-    transform: translate(1000px, 50px);
+            transform: translate(1000px, 50px);
   }
 }
 
 @-webkit-keyframes wave3-move {
   from {
     -webkit-transform: translate(-500px, 50px);
-    transform: translate(-500px, 50px);
+            transform: translate(-500px, 50px);
   }
 
   to {
     -webkit-transform: translate(1000px, 50px);
-    transform: translate(1000px, 50px);
+            transform: translate(1000px, 50px);
   }
 }
 
 @keyframes wave3-move {
   from {
     -webkit-transform: translate(-500px, 50px);
-    transform: translate(-500px, 50px);
+            transform: translate(-500px, 50px);
   }
 
   to {
     -webkit-transform: translate(1000px, 50px);
-    transform: translate(1000px, 50px);
+            transform: translate(1000px, 50px);
   }
 }
 
 #svg_445 {
   -webkit-animation: 4s color-change infinite alternate linear;
-  animation: 4s color-change infinite alternate linear;
+          animation: 4s color-change infinite alternate linear;
 }
 
 #svg_14, #svg_13 {
   -webkit-animation: 10s cloud1-move infinite alternate linear;
-  animation: 10s cloud1-move infinite alternate linear;
+          animation: 10s cloud1-move infinite alternate linear;
 }
 
 #svg_16, #svg_15 {
   -webkit-animation: 10s cloud2-move infinite alternate linear;
-  animation: 10s cloud2-move infinite alternate linear;
+          animation: 10s cloud2-move infinite alternate linear;
 }
 
 #svg_18, #svg_17 {
   -webkit-animation: 8s cloud3-move infinite alternate linear;
-  animation: 8s cloud3-move infinite alternate linear;
+          animation: 8s cloud3-move infinite alternate linear;
 }
 
 #svg_22, #svg_21 {
   -webkit-animation: 7s cloud4-move infinite alternate linear;
-  animation: 7s cloud4-move infinite alternate linear;
+          animation: 7s cloud4-move infinite alternate linear;
 }
 
 #svg_20, #svg_19 {
   -webkit-animation: 5s cloud5-move infinite alternate linear;
-  animation: 5s cloud5-move infinite alternate linear;
+          animation: 5s cloud5-move infinite alternate linear;
 }
 
 #svg_33 {
   -webkit-animation: 10s wave1-move infinite alternate linear;
-  animation: 10s wave1-move infinite alternate linear;
+          animation: 10s wave1-move infinite alternate linear;
 }
 
 #svg_32 {
   -webkit-animation: 10s wave2-move infinite alternate linear;
-  animation: 10s wave2-move infinite alternate linear;
+          animation: 10s wave2-move infinite alternate linear;
 }
 
 #svg_31 {
   -webkit-animation: 10s wave3-move infinite alternate linear;
-  animation: 10s wave3-move infinite alternate linear;
+          animation: 10s wave3-move infinite alternate linear;
 }
 
 @media all and (max-width: 500px) {
@@ -485,12 +572,12 @@ button:focus {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   header a {
@@ -503,8 +590,8 @@ button:focus {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   main #info {
@@ -513,11 +600,11 @@ button:focus {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   main #info img {
@@ -550,12 +637,12 @@ button:focus {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   header a {
