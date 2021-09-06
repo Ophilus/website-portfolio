@@ -2,10 +2,26 @@
   --table-color: rgb(45, 45, 42);
   --additional-color: rgb(193, 73, 83);
   --secondary-color: rgb(51, 51, 51);
+  --partOfBg-color: #767676;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.absolute {
+  position: absolute;
+  width: 40%;
+  height: 100vh;
+  background: var(--partOfBg-color);
+  z-index: -1;
+  display: flex;
+  align-items: flex-end;
+}
+
+.absolute h1 {
+  writing-mode: vertical-rl;
+  color: white;
 }
 
 body {
@@ -16,12 +32,51 @@ body {
   height: 100vh;
 }
 
+.flex-box {
+  display: flex;
+}
+
+.flex-box div {
+  display: flex;
+  flex-direction: column;
+}
+
 main {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
+}
+
+#contact {
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#contact div:first-child {
+  color: white;
+}
+
+#aboutMe {
+  text-align: center;
+  background-image: url(../img/laptop.jpg);
+  width: 100%;
+  background-size: cover;
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2% 5%;
+}
+
+#darkBackground {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
 }
 
 main p {
@@ -46,6 +101,11 @@ footer {
 }
 
 /*Table*/
+table {
+  width: 70%;
+  margin: 1% 14%;
+}
+
 table, th, td {
   border: 1px solid var(--table-color);
   border-collapse: separate;
@@ -85,7 +145,7 @@ a:hover {
 }
 
 a span {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -164,7 +224,7 @@ button:hover, button:focus {
   background: var(--additional-color);
 }
 
-.list__item .item.item1 .content h3 {
+.list__item .item.item1 .content h2 {
   font-family: serif;
   font-weight: bold;
   color: #fff;
@@ -339,6 +399,14 @@ button:hover, button:focus {
 }
 
 @media all and (max-width: 500px) {
+  .flex-box {
+    flex-direction: column;
+  }
+
+  .absolute {
+    width: 100%;
+  }
+
   .project-list {
     grid-template-columns: 1fr;
     grid-gap: 10px;
@@ -347,6 +415,10 @@ button:hover, button:focus {
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
+  }
+
+  #portrait {
+    width: 70%;
   }
 
   h1 {
@@ -381,9 +453,41 @@ button:hover, button:focus {
   main svg {
     display: none;
   }
+
+  th, td {
+    padding: 2px 5px;
+  }
+
+  table {
+    margin: 1% 5%;
+  }
+
+  #contact div:first-child {
+    color: black;
+  }
+
+  #contact div:first-child span {
+    color: black;
+  }
+
+  .absolute h1 {
+    display: none;
+  }
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
+  .flex-box {
+    flex-direction: column;
+  }
+
+  .absolute {
+    width: 100%;
+  }
+
+  #portrait {
+    width: 70%;
+  }
+
   .project-list {
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
@@ -392,6 +496,10 @@ button:hover, button:focus {
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
+  }
+
+  main svg {
+    display: none;
   }
 
   h1 {
@@ -406,5 +514,30 @@ button:hover, button:focus {
 
   header a {
     text-align: center;
+  }
+
+  nav li {
+    display: flex;
+    flex-direction: column;
+  }
+
+  th, td {
+    padding: 4px 15px;
+  }
+
+  #contact {
+    flex-direction: column;
+  }
+
+  #contact div:first-child {
+    color: black;
+  }
+
+  #contact div:first-child span {
+    color: black;
+  }
+
+  .absolute h1 {
+    display: none;
   }
 }

@@ -10,6 +10,27 @@
           box-sizing: border-box;
 }
 
+.absolute {
+  position: absolute;
+  width: 40%;
+  height: 100vh;
+  background: #767676;
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.absolute h1 {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  color: white;
+}
+
 body {
   background: white;
   display: -webkit-box;
@@ -23,6 +44,22 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100vh;
+}
+
+.flex-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-box div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 main {
@@ -41,6 +78,45 @@ main {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+#contact {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#contact div:first-child {
+  color: white;
+}
+
+#aboutMe {
+  text-align: center;
+  background-image: url(../img/laptop.jpg);
+  width: 100%;
+  background-size: cover;
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2% 5%;
+}
+
+#darkBackground {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
 }
 
 main p {
@@ -75,13 +151,20 @@ footer {
 
 /*Table*/
 table {
+  width: 70%;
+  margin: 1% 14%;
+}
+
+table {
   border: 1px solid rgb(45, 45, 42);
   border-collapse: separate;
 }
+
 th {
   border: 1px solid rgb(45, 45, 42);
   border-collapse: separate;
 }
+
 td {
   border: 1px solid rgb(45, 45, 42);
   border-collapse: separate;
@@ -121,7 +204,7 @@ a:hover {
 }
 
 a span {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -234,7 +317,7 @@ button:focus {
   background: rgb(193, 73, 83);
 }
 
-.list__item .item.item1 .content h3 {
+.list__item .item.item1 .content h2 {
   font-family: serif;
   font-weight: bold;
   color: #fff;
@@ -552,6 +635,17 @@ button:focus {
 }
 
 @media all and (max-width: 500px) {
+  .flex-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .absolute {
+    width: 100%;
+  }
+
   .project-list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -561,6 +655,10 @@ button:focus {
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
+  }
+
+  #portrait {
+    width: 70%;
   }
 
   h1 {
@@ -614,9 +712,44 @@ button:focus {
   main svg {
     display: none;
   }
+
+  th, td {
+    padding: 2px 5px;
+  }
+
+  table {
+    margin: 1% 5%;
+  }
+
+  #contact div:first-child {
+    color: black;
+  }
+
+  #contact div:first-child span {
+    color: black;
+  }
+
+  .absolute h1 {
+    display: none;
+  }
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
+  .flex-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .absolute {
+    width: 100%;
+  }
+
+  #portrait {
+    width: 70%;
+  }
+
   .project-list {
     -ms-grid-columns: 1fr 10px 1fr;
     grid-template-columns: 1fr 1fr;
@@ -626,6 +759,10 @@ button:focus {
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
+  }
+
+  main svg {
+    display: none;
   }
 
   h1 {
@@ -647,5 +784,38 @@ button:focus {
 
   header a {
     text-align: center;
+  }
+
+  nav li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  th, td {
+    padding: 4px 15px;
+  }
+
+  #contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  #contact div:first-child {
+    color: black;
+  }
+
+  #contact div:first-child span {
+    color: black;
+  }
+
+  .absolute h1 {
+    display: none;
   }
 }

@@ -12,6 +12,8 @@
 </head>
 
 <body>
+  <div class='absolute'><h1>Contact me</h1></div>
+
   <header>
     <!--My Logo-->
     <a href="index.html">
@@ -34,7 +36,7 @@
       </ul>
     </nav>
   </header>
-  <main>
+  <main id="contact">
     <div>
       <h1>Contact</h1>
       <p>Vadym Hryn<br>
@@ -45,28 +47,29 @@
         <a href="tel:+16466837980"><span>Call me: </span>+1 646 683 7980</a><br>
         <a href="mailto:gryn.vadim@gmail.com"><span>Text me:</span> gryn.vadim@gmail.com</a>
       </p>
-      <div>
-        <h1>Feedback</h1>
-        <form action="" method="post" id="contactForm">
-          <label class="formLabel" for="contacFName">First Name: </label>
-          <input type="text" id="contacFName" placeholder="John" required>
-          <br>
-          <label class="formLabel" for="contacLName">Last Name: </label>
-          <input type="text" id="contacLName" placeholder="Smith" required>
-          <br>
-          <label class="formLabel" for="contactEmail">Email: </label>
-          <input type="email" id="contactEmail" placeholder="example@gmail.com" required>
-          <br>
-          <label class="formLabel" for="contactTel">Telephone: </label>
-          <input type="tel" id="contactTel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="000-000-0000">
-          <br>
-          <label class="formLabel" for="contactMes">Message: </label>
-          <textarea id="contactMes" maxlength="240" required></textarea>
-          <br>
-          <input type="submit" value="Send message">
-        </form>
-      </div>
     </div>
+    <div>
+      <h1>Feedback</h1>
+      <form action="" method="post" id="contactForm">
+        <label class="formLabel" for="contacFName">First Name: </label>
+        <input type="text" id="contacFName" placeholder="John" required>
+        <br>
+        <label class="formLabel" for="contacLName">Last Name: </label>
+        <input type="text" id="contacLName" placeholder="Smith" required>
+        <br>
+        <label class="formLabel" for="contactEmail">Email: </label>
+        <input type="email" id="contactEmail" placeholder="example@gmail.com" required>
+        <br>
+        <label class="formLabel" for="contactTel">Telephone: </label>
+        <input type="tel" id="contactTel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="000-000-0000">
+        <br>
+        <label class="formLabel" for="contactMes">Message: </label>
+        <textarea id="contactMes" maxlength="240" required></textarea>
+        <br>
+        <input type="submit" value="Send message">
+      </form>
+    </div>
+
   </main>
   <footer>
     <p>Find me on</p>
