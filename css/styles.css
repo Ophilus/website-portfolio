@@ -47,6 +47,7 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  -webkit-flex-direction: column;
   flex-wrap: wrap;
 }
 
