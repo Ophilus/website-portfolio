@@ -9,6 +9,26 @@
   box-sizing: border-box;
 }
 
+body {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
+}
+
 .absolute {
   position: absolute;
   width: 40%;
@@ -24,23 +44,6 @@
   color: white;
 }
 
-body {
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
-}
-
-.flex-box {
-  display: flex;
-}
-
-.flex-box div {
-  display: flex;
-  flex-direction: column;
-}
-
 main {
   display: -webkit-flex;
   display: flex;
@@ -50,6 +53,15 @@ main {
   flex-direction: column;
   -webkit-flex-direction: column;
   flex-wrap: wrap;
+}
+
+.flex-box {
+  display: flex;
+}
+
+.flex-box div {
+  display: flex;
+  flex-direction: column;
 }
 
 #contact {
@@ -89,18 +101,6 @@ main p {
 main img {
   margin-right: 20px;
   float: left;
-}
-
-header {
-  display: flex;
-  justify-content: space-around;
-}
-
-footer {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  text-align: center;
 }
 
 /*Table*/
@@ -429,18 +429,12 @@ button:hover, button:focus {
   }
 
   header {
-    display: flex;
     justify-content: center;
     flex-direction: column;
   }
 
   header a {
     text-align: center;
-  }
-
-  nav li {
-    display: flex;
-    flex-direction: column;
   }
 
   main #info {
@@ -510,18 +504,11 @@ button:hover, button:focus {
   }
 
   header {
-    display: flex;
     justify-content: center;
-    flex-direction: column;
   }
 
   header a {
     text-align: center;
-  }
-
-  nav li {
-    display: flex;
-    flex-direction: column;
   }
 
   th, td {
