@@ -251,8 +251,11 @@ button:hover, button:focus {
 .list__item .item.item2 .content p {
   margin: 0;
   padding: 0;
-  font-size: 0.7em;
   font-family: serif;
+}
+
+.content p{
+  font-size: 1em;
 }
 
 .list__item .item.item2 .content a {
