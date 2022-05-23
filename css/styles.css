@@ -275,6 +275,18 @@ button:hover, button:focus {
   font-weight: 900;
 }
 
+.list_tech{
+  margin-top: 10px;
+}
+
+.list_tech span{
+  background: var(--additional-color);
+  padding:5px 5px;
+  color:#fff;
+  white-space:nowrap;
+  margin-top: 10px;
+}
+
 @keyframes color-change {
   0% {
     fill: #edc340;

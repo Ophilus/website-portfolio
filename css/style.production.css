@@ -275,14 +275,14 @@ button:focus {
 }
 
 .list__item {
-  height: 250px;
+  height: 400px;
   position: relative;
   overflow: hidden;
 }
 
 .list__item .item {
   width: 300px;
-  height: 250px;
+  height: 400px;
   -webkit-transition: 0.8s;
   -o-transition: 0.8s;
   transition: 0.8s;
@@ -312,9 +312,9 @@ button:focus {
 }
 
 .list__item:hover .item.item1 {
-  -webkit-transform: translateY(-250px);
-      -ms-transform: translateY(-250px);
-          transform: translateY(-250px);
+  -webkit-transform: translateY(-400px);
+      -ms-transform: translateY(-400px);
+          transform: translateY(-400px);
   background: rgb(193, 73, 83);
 }
 
@@ -342,9 +342,9 @@ button:focus {
 }
 
 .list__item:hover .item.item2 {
-  -webkit-transform: translateY(-250px);
-      -ms-transform: translateY(-250px);
-          transform: translateY(-250px);
+  -webkit-transform: translateY(-400px);
+      -ms-transform: translateY(-400px);
+          transform: translateY(-400px);
 }
 
 .list__item .item.item2 .content p {
@@ -368,6 +368,18 @@ button:focus {
   color: rgb(51, 51, 51);
   font-style: normal;
   font-weight: 900;
+}
+
+.list_tech{
+  margin-top: 10px;
+}
+
+.list_tech span{
+  background:rgb(193, 73, 83);
+  padding:5px 5px;
+  color:#fff;
+  white-space:nowrap;
+  margin-top: 10px;
 }
 
 @-webkit-keyframes color-change {
