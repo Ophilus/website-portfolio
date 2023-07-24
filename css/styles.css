@@ -78,7 +78,7 @@ main {
   background-image: url(../img/laptop.jpg);
   width: 100%;
   background-size: cover;
-  min-height: 500px;
+  min-height: 600px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

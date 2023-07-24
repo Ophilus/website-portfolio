@@ -1,9 +1,16 @@
 /*
 * Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.3.6,
-* Autoprefixer: v10.3.1
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
 * Browsers: last 4 version
 */
+
+:root {
+  --table-color: rgb(45, 45, 42);
+  --additional-color: rgb(193, 73, 83);
+  --secondary-color: rgb(51, 51, 51);
+  --partOfBg-color: #767676;
+}
 
 * {
   -webkit-box-sizing: border-box;
@@ -50,7 +57,7 @@ footer {
   position: absolute;
   width: 40%;
   height: 100vh;
-  background: #767676;
+  background: var(--partOfBg-color);
   z-index: -1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -120,7 +127,7 @@ main {
   background-image: url(../img/laptop.jpg);
   width: 100%;
   background-size: cover;
-  min-height: 500px;
+  min-height: 600px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -156,24 +163,14 @@ table {
   margin: 1% 14%;
 }
 
-table {
-  border: 1px solid rgb(45, 45, 42);
-  border-collapse: separate;
-}
-
-th {
-  border: 1px solid rgb(45, 45, 42);
-  border-collapse: separate;
-}
-
-td {
-  border: 1px solid rgb(45, 45, 42);
+table, th, td {
+  border: 1px solid var(--table-color);
   border-collapse: separate;
 }
 
 table th {
   font-family: 'Staatliches', cursive;
-  color: rgb(45, 45, 42);
+  color: var(--table-color);
 }
 
 th, td {
@@ -219,24 +216,19 @@ button {
   -webkit-transition: ease-out 0.7s;
   -o-transition: ease-out 0.7s;
   transition: ease-out 0.7s;
-  background: rgb(193, 73, 83);
+  background: var(--additional-color);
   color: white;
 }
 
-button:hover {
+button:hover, button:focus {
   background: white;
-  color: rgb(193, 73, 83);
-}
-
-button:focus {
-  background: white;
-  color: rgb(193, 73, 83);
+  color: var(--additional-color);
 }
 
 .button {
   display: inline-block;
   font-family: inherit;
-  background-color: rgb(193, 73, 83);
+  background-color: var(--additional-color);
   color: white;
   text-decoration: none;
   padding: 10px;
@@ -247,21 +239,13 @@ button:focus {
   transition: ease-out 0.7s;
 }
 
-.button:hover {
-  font-style: normal;
-  font-weight: normal;
-  cursor: pointer;
-  opacity: 0.8;
-  color: rgb(193, 73, 83);
-  background-color: #fff;
-}
-
+.button:hover,
 .button:focus {
   font-style: normal;
   font-weight: normal;
   cursor: pointer;
   opacity: 0.8;
-  color: rgb(193, 73, 83);
+  color: var(--additional-color);
   background-color: #fff;
 }
 
@@ -275,21 +259,21 @@ button:focus {
 }
 
 .list__item {
-  height: 400px;
+  height: 250px;
   position: relative;
   overflow: hidden;
 }
 
 .list__item .item {
   width: 300px;
-  height: 400px;
+  height: 250px;
   -webkit-transition: 0.8s;
   -o-transition: 0.8s;
   transition: 0.8s;
 }
 
 .list__item .item.item1 {
-  background: rgb(51, 51, 51);
+  background: var(--secondary-color);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -312,10 +296,10 @@ button:focus {
 }
 
 .list__item:hover .item.item1 {
-  -webkit-transform: translateY(-400px);
-      -ms-transform: translateY(-400px);
-          transform: translateY(-400px);
-  background: rgb(193, 73, 83);
+  -webkit-transform: translateY(-250px);
+      -ms-transform: translateY(-250px);
+          transform: translateY(-250px);
+  background: var(--additional-color);
 }
 
 .list__item .item.item1 .content h2 {
@@ -342,9 +326,9 @@ button:focus {
 }
 
 .list__item:hover .item.item2 {
-  -webkit-transform: translateY(-400px);
-      -ms-transform: translateY(-400px);
-          transform: translateY(-400px);
+  -webkit-transform: translateY(-250px);
+      -ms-transform: translateY(-250px);
+          transform: translateY(-250px);
 }
 
 .list__item .item.item2 .content p {
@@ -353,19 +337,23 @@ button:focus {
   font-family: serif;
 }
 
+#info{
+  font-size: 1em;
+}
+
 .list__item .item.item2 .content a {
   margin: 15px 0 0;
   display: inline-block;
   text-decoration: none;
   font-weight: 900;
-  color: rgb(51, 51, 51);
+  color: var(--secondary-color);
   padding: 5px;
   border: 1px solid #333;
 }
 
 .list__item .item.item2 .content a:hover {
-  background: rgb(193, 73, 83);
-  color: rgb(51, 51, 51);
+  background: var(--additional-color);
+  color: var(--secondary-color);
   font-style: normal;
   font-weight: 900;
 }
@@ -375,7 +363,7 @@ button:focus {
 }
 
 .list_tech span{
-  background:rgb(193, 73, 83);
+  background: var(--additional-color);
   padding:5px 5px;
   color:#fff;
   white-space:nowrap;
